@@ -10,16 +10,16 @@
 #sleep(2000);
  
  
-Print('JOB_DWH_KUR running');
+Print('JOB_X running');
  
  
-Print(exec('C:\ProgramData\SAP BusinessObjects\Data Services\log\JOB_DWH_KUR.bat','',8));
+Print(exec('C:\ProgramData\SAP BusinessObjects\Data Services\log\JOB_X.bat','',8));
  
  
  
-#Print('Trigger JOB_DWH_KUR');
+#Print('Trigger JOB_X');
  
-#Print(exec('C:\ProgramData\SAP BusinessObjects\Data Services\log\JOB_DWH_KUR.bat','',8));
+#Print(exec('C:\ProgramData\SAP BusinessObjects\Data Services\log\JOB_X.bat','',8));
  
 #Remain idle for 2 secs so that Job Status is Stable (Status moves from S to D for a Successful Job and E for Error)
  
@@ -27,13 +27,13 @@ Print(exec('C:\ProgramData\SAP BusinessObjects\Data Services\log\JOB_DWH_KUR.bat
  
 #Pick up the latest job Start time
  
-#$G_MaxTimestamp =  sql('DS_SAP_DS_REP', 'SELECT  MAX(START_TIME) FROM ALVW_HISTORY WHERE SERVICE=\'JOB_DWH_KUR\';');
+#$G_MaxTimestamp =  sql('DS_SAP_DS_REP', 'SELECT  MAX(START_TIME) FROM ALVW_HISTORY WHERE SERVICE=\'JOB_X\';');
  
 #PRINT($G_MaxTimestamp);
  
 #Check the latest status of the preceding job
  
-#$G_JobStatus = sql('DS_SAP_DS_REP', 'SELECT STATUS FROM ALVW_HISTORY WHERE SERVICE=\'JOB_DWH_KUR\' AND START_TIME=\'[$G_MaxTimestamp]\';');
+#$G_JobStatus = sql('DS_SAP_DS_REP', 'SELECT STATUS FROM ALVW_HISTORY WHERE SERVICE=\'JOB_X\' AND START_TIME=\'[$G_MaxTimestamp]\';');
  
 #PRINT($G_JobStatus);
  
