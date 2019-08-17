@@ -1,9 +1,10 @@
-# Trigger an ETL job inside from another job
-#First of all you need to export 2nd job. 'Export Execution Command' inside of the Sap Data Services Management Console.
-#It will generate a .bat file that you can run to start the job.
-#Execute it with the exec built-in function in a script at the end of the 1st job.
-#It is meaningful when you use it inside the job.
-#There is a sample below.
+Trigger an ETL job inside from another job
+This sheet make it possible to run a SAPDS etl job inside an another etl job.
+First of all you need to export 2nd job. 'Export Execution Command' inside of the Sap Data Services Management Console.
+It will generate a .bat file that you can run to start the job.
+Execute it with the exec built-in function in a script at the end of the 1st job.
+It is meaningful when you use it inside the job.
+There is a sample below.
  
 #wait for 2 seconds
  
