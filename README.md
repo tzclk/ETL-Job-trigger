@@ -4,7 +4,7 @@ First of all you need to export 2nd job. 'Export Execution Command' inside of th
 It will generate a .bat file that you can run to start the job.
 Execute it with the exec built-in function in a script at the end of the 1st job.
 It is meaningful when you use it inside the job.
-There is a sample below.
+There is a sample below. ALVW_HISTORY is one of the default audit tables of SAP.
  
 #wait for 2 seconds
  
